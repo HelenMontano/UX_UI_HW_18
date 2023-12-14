@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+  <!--Header-->
+  <header>
+    <!--Link to Call in Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <!--Link to Call in Css File-->
+    <link rel="stylesheet" href="styles.css" />
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="Images/favicon.png" />
+    <!--Site Name-->
+    <title>Contact Me</title>
+  </header>
+
+  <!--Content-->
+  <body>
+    <!--Navigation-->
+    <nav>
+      <!--Nav Item 1-->
+      <div class="nav-link">
+        <!-- <span></span> -->
+        <div class="dropdown">
+          <a href="index.html">Projects</a>
+          <div class="dropdown-content">
+            <a href="#">Project 1</a>
+            <a href="#">Project 2</a>
+            <a href="#">Project 3</a>
+          </div>
+        </div>
+      </div>
+
+      <!--Nav Item 2-->
+      <div class="nav-link">
+        <a href="aboutPage.html">About Me</a>
+      </div>
+
+      <!--Nav Item 3-->
+      <div class="nav-link">
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <!--Nav Item 4-->
+      <div class="nav-link">
+        <a href="">Playground</a>
+      </div>
+    </nav>
+
+    <!--Mobile Nav - Hidden on Desktop -->
+    <section class="nav-mobile" role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox" />
+
+        <!--Hamburger Lines -->
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <!--Links Inside of Drop Down-->
+        <ul id="menu">
+          <a href="index.html"><li>Projects</li></a>
+          <a href="aboutPage.html"><li>About Me</li></a>
+          <a href="contact.html"><li>Contact</li></a>
+          <a href="#"><li>Playground</li></a>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>
