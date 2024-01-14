@@ -11,10 +11,16 @@
       rel="stylesheet"
     />
     <meta charset="UTF-8" />
+
     <!--Link to Call in Css File-->
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- Include jQuery from a CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
     <!--Favicon-->
     <link rel="icon" type="image/x-icon" href="Images/favicon.png" />
+
     <!--Site Name-->
     <title>Helen's Portfolio</title>
   </header>
@@ -43,11 +49,6 @@
 
       <!--Nav Item 3-->
       <div class="nav-link">
-        <a href="contact.html">Contact</a>
-      </div>
-
-      <!--Nav Item 4-->
-      <div class="nav-link">
         <a href="">Playground</a>
       </div>
     </nav>
@@ -66,7 +67,6 @@
         <ul id="menu">
           <a href="index.html"><li>Projects</li></a>
           <a href="aboutPage.html"><li>About Me</li></a>
-          <a href="aboutPage.html"><li>Contact</li></a>
           <a href="#"><li>Playground</li></a>
         </ul>
       </div>
@@ -75,41 +75,47 @@
     <!--Hero-->
     <section class="hero-container">
       <!--Image-->
-      <div class="hero-container_img">
-        <img src="https://via.placeholder.com/500" />
-      </div>
+      <!--<div class="hero-container_img">
+       <img src="https://via.placeholder.com/500" /> 
+      </div> -->
 
       <!--Text Info-->
       <div class="hero-container_copy">
         <h1 class="margin-bottom_five">
-          Hello World! I'm Helen an UX/UI designer.
+          Hello World! I'm Helen an UX/UI designer and researcher.
         </h1>
         <h2 class="hero-container_sub-copy">
-          On a mission to transform challenges into captivating user
-          experiences. With a dash of innovation and a splash of fresh
-          perspectives, I'm geared up to bring some serious fun to the job
-          field!
+          I'm all about turning challenges into engaging user experiences. Ready
+          to bring innovation and fresh perspectives!
         </h2>
       </div>
     </section>
 
     <!--Case Study Cards-->
     <section>
-      <h2 class="center">Case Studies &amp; Recent Work</h2>
-
+      <div class="case">
+        <h2 class="center">Case Studies &amp; Recent Work</h2>
+      </div>
       <!--Card Container-->
       <div class="card-container">
         <!--Card 1-->
         <div class="card">
           <a href="">
             <!--Image-->
-            <img src="https://via.placeholder.com/400" />
+            <img
+              src="/UX_UI_HW_18/img/travelLady.png"
+              height="400"
+              width="400"
+              alt="picture of girl and world"
+            />
             <!--Copy-->
             <div class="card-copy">
               <h3 class="margin-bottom_five">My Guidebook Assistant</h3>
               <p class="margin-top_zero">
-                Intuitive application tailored for seamless group trip planning,
-                effortlessly generating curated plans for you and your friends.
+                This intuitive application is tailored for seamless group trip
+                planning, to effortlessly generate curated plans for you and
+                your friends. Now you can truly enjoy your vaction without
+                unnecessary stress!
               </p>
               <p class="link">View Case My Guidebook Assistant</p>
             </div>
@@ -120,27 +126,14 @@
         <div class="card">
           <a href="">
             <!--Image-->
-            <img src="https://via.placeholder.com/400" />
-            <!--Copy-->
-            <div class="card-copy">
-              <h3 class="margin-bottom_five">
-                U.S. Department of the Interior
-              </h3>
-              <p class="margin-top_zero">
-                There is always room for enhancement! By redesigning the
-                homepage layout and focal points, I aimed at optimizing user
-                navigation and overall experience on the site.
-              </p>
-              <p class="link">View DOI Redesign</p>
+            <div class="image-container">
+              <img
+                src="/UX_UI_HW_18/img/whiteBunny.png"
+                height="400"
+                width="300"
+                alt="White Bunny"
+              />
             </div>
-          </a>
-        </div>
-
-        <!--Card 3-->
-        <div class="card">
-          <a href="">
-            <!--Image-->
-            <img src="https://via.placeholder.com/400" />
             <!--Copy-->
             <div class="card-copy">
               <h3 class="margin-bottom_five">The Bunny Bunch</h3>
@@ -151,22 +144,6 @@
                 smoother navigation for users throughout the website.
               </p>
               <p class="link">View Bunny Bunch Redesign</p>
-            </div>
-          </a>
-        </div>
-
-        <!--Card 4-->
-        <div class="card">
-          <a href="">
-            <!--Image-->
-            <img src="https://via.placeholder.com/400" />
-            <!--Copy-->
-            <div class="card-copy">
-              <h3 class="margin-bottom_five">Case Study 4</h3>
-              <p class="margin-top_zero">
-                Brief Overview of What Project Was or Features
-              </p>
-              <p class="link">View Case Study Name</p>
             </div>
           </a>
         </div>
@@ -184,7 +161,9 @@
       <!-- <a class="link" href="tel:123-456-7890">123-456-7890</a> -->
 
       <!--Copyright-->
-      <p class="copyright">&copy; 2023 "Helen Montano". All Rights Reserved</p>
+      <p class="copyright">&copy; 2024 "Helen Montano". All Rights Reserved</p>
     </footer>
+    <!--Link to Call in JS File-->
+    <script src="index.js"></script>
   </body>
 </html>

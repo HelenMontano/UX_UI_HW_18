@@ -46,9 +46,18 @@ body {
    }
    
    /*Define Global Helper Styles*/
-   
+
+   .case {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
    .center {
        text-align: center;
+       background-color: #63B3B8;
+       padding: 30px; 
+       border-radius: 20px;
+       display: inline-block;
    }
    
    .margin-bottom_five {
@@ -69,18 +78,20 @@ body {
    
    .hero-container_sub-copy {
        font-weight: 400;
+       align-items: center;
    }
    
    /*Define Navigation Styles*/
    
    nav {
-       background-color: #ffffff;
+       background-color: #63B3B8;
        display: flex;
        flex-direction: row wrap;
        justify-content: flex-end;
        padding-right: 20px;
        position: sticky;
        top: 0;
+       z-index: 1000;
    }
    
    .nav-link {
@@ -267,12 +278,13 @@ body {
    /* Define Hero Styles */
     
    .hero-container {
-       background-color: #f2f2f2;
-       display: flex;
-       align-items: center;
+       background-color: #e5fbd0;
+       display: flex; 
+       justify-content: center;
+      /* align-items: center; */
        margin-bottom: 60px;
    }
-   
+   /*
    .hero-container_img {
       width: 30%;
       order: 2;
@@ -281,11 +293,14 @@ body {
    .hero-container_img img {
        width: 100%;
    }
-   
+   */
+
    .hero-container_copy {
        width: 60%;
-       padding: 5%;
+       padding: 5%; 
        order: 1;
+       text-align: center;
+      /* align-items: center; */
    } 
    
    /* Define Card Styles */
@@ -299,21 +314,35 @@ body {
    }
    
    .card {
-       background-color: #f2f2f2;
+       
        width: 40%;
        margin: 20px;
+       overflow: hidden;
+       position: relative;
+       z-index: 1;
    }
    
    .card a:hover {
        text-decoration: none;
    }
    
+   .card img {
+    transition: transform 0.3s ease-out;
+   }
+
+   .card:hover img{
+    transform: scale(1.1);
+   }
+
    .card-copy {
        padding: 0 20px 20px 20px;
+       background-color: #e5fbd0;
+       position: relative;
+       z-index: 2;
    }
    
    footer {
-       background-color: #f2f2f2;
+       background-color: #63B3B8;
        text-align: right;
        padding: 40px;
    }
@@ -390,28 +419,59 @@ body {
 
    .aboutMeTitle {
     text-align: center;
+    background-color: #63b3b8;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+   }
+
+   .titleBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
    }
 
    .hero-container-aboutPage {
-    background-color: #f2f2f2;
+    background-color: #e5fbd0;
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 60px;
-    margin-left: 60px;
+    height: 60vh;
+    /*height: 100vh;*/
+   /* margin-bottom: 60px;
+    margin-left: 60px;*/
    }
+
+   .hero-container_img {
+    max-width: 50%;
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+   /* display: flex;
+    flex-direction: column;*/
+    /*order: 1;
+    width: 40%; */ 
+    /*padding-right: 20px; */
+ }
+ .hero-container_img img {
+     width: 100%;
+     max-width: 100%;
+ }
 
    .text-aboutMePage {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 40px;
     padding-left: 45px;
     padding-right: 45px;
+    padding-bottom: 40px;
     /*height: 100vh; */
    }
-
+/*
    .skills-section {
-    max-width: 600px;
+    max-width: 200px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
@@ -423,9 +483,9 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
   }
-
-  .skill {
-    flex: 0 1 calc(30% - 10px);
+*/
+ /* .skill {
+   
     font-size: small;
     margin-bottom: 10px;
     padding: 10px;
@@ -433,8 +493,127 @@ body {
     border: 1px solid #ddd;
     border-radius: 5px;
     text-align: center;
+  } */
+
+ .skills-heading{
+    text-align: center; 
+    padding-top: 10px;
+    margin: 0;
+    
   }
 
-  .skills-header{
+
+  
+  .accordion {
+    background-color: #63B3B8;
+    width: 60%;
+    height: 70px;
+    margin: auto;
+    border-radius: 20px;
+  }
+  
+  .accordion:hover{
+    cursor: pointer;
+  }
+  
+  /* Main accordion title */
+  
+  .accordion h1{
+    display: center;
+    font-weight: 50;
+  }
+  
+  /* Main accordion arrow */
+  
+  .accordion button{
+   
+    font-size: 20px;
+    background-color: transparent;
+    border-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    outline: none;
+  }
+  
+  
+  /* Accordion dropdown panel */
+  
+  .accordion-panel{
+    
+    margin: 0 auto;
+    padding: 10px;
+    min-width: 50%;
+    max-width: 5%;
+    border-width: 2px;
+    background-color: #fafafad4;
+    border-color: #e3e3e3;
+    border-style: solid;
+    border-top: none;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  
+    
+  }
+  
+  /* Rotate class for dropdown button */
+  
+  .rotate {
+      -moz-transition: all .5s linear;
+      -webkit-transition: all .5s linear;
+      transition: all .5s linear;
+  }
+  
+  .rotate.up {
+      -moz-transform:rotate(180deg);
+      -webkit-transform:rotate(180deg);
+      transform:rotate(180deg);
+  }
+ 
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding-right: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .skills-grid li {
+    position: relative;
+    background-color: #52b69a;
+    color: #000000;
+    padding: 10px;
+    border-radius: 10px;
+    list-style: none;
     text-align: center;
+   overflow: hidden;
+   z-index: 1;
+  }
+
+  .skills-grid li:hover::before,
+  .skills-grid li:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.8) 50%, transparent);
+    transition: transform 0.3s ease-in-out;
+    z-index: -1;
+  }
+
+  .skills-grid li:hover::before {
+    left: -100%;
+    transform: translateX(100%);
+  }
+  
+  .skills-grid li:hover::after {
+    right: -100%;
+    transform: translateX(-100%);
+  }
+  .space {
+    padding-bottom: 100px;
   }
